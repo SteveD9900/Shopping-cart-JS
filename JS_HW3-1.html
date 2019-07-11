@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Steve JS3-1 HW </title>
+    <link rel="stylesheet" href="js_3_1.css">
+    <script src="https://code.jquery.com/jquery-2.2.4.js" charset="utf-8"></script>
+    <script src="js_3_1.js"></script> 
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>  -->
+</head>
+<body>
+    <div id="title">
+        <h1>购物车</h1>
+    </div>
+    <table id="cart_box">
+        <tr>
+            <th><input type="checkbox" value="" class="click_all" id="selectAll"> 全选</th>
+            <th>图片</th>
+            <th>描述</th>
+            <th>数量</th>
+            <th>单价</th>
+            <th>小计</th>
+        </tr>
+        <tr>
+            <td><input type="checkbox" value="" id='id1' name='cb'></td>
+            <td><img src="img/iwtach.png" alt="" class="sample_img"></td>
+            <td>酷黑，棒棒棒棒</td>
+            <td> 
+                <form name="buy1" class="count_box">
+                    <button class="minus-btn" type="button" name="button" value="-">-</button>
+                    <!-- <input type="button"  value="-" onclick="sub1()" class="minus-btn">   -->
+                    <input type="text" name="ans1" value="1" class="number" data-unit-price="111">  
+                    <!-- <input type="button"  value="+" onclick="add1()" class="plus-btn">   -->
+                    <button class="plus-btn" type="button" name="button" value="+">+</button> 
+                </form>
+            </td>
+            <td>¥111</td>
+            <td class="total"> <span class = "single_total">¥111</span> </td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" value="" id='id1' name='cb'></td>
+            <td><img src="img/iphone_se.png" alt="" class="sample_img"></td>
+            <td>土豪金， 尊贵享受！</td>
+            <td>
+                <form name="buy2" class="count_box">  
+                    <button class="minus-btn" type="button" name="button" value="-">-</button>
+                    <!-- <input type="button"  value="-" onclick="sub2()" class="minus-btn">   -->
+                    <input type="text" name="ans2" value="1" class="number" data-unit-price="111">  
+                    <!-- <input type="button"  value="+" onclick="add2()" class="plus-btn">   -->
+                    <button class="plus-btn" type="button" name="button" value="+">+</button> 
+                </form>
+            </td>
+            <td>¥111</td>
+            <td class="total"> <span class = "single_total">¥111</span></td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" value="" name='cb' id='id1'></td>
+            <td><img src="img/mate.png" alt="" class="sample_img">
+            </td>
+            <td>大屏幕，清晰无比</td>
+            <td>
+                <form name="buy3" class="count_box">
+                    <button class="minus-btn" type="button" name="button" value="-">-</button>
+                    <!-- <input type="button"  value="-" onclick="sub3()" class="minus-btn" >   -->
+                    <input type="text" name="ans3" value="1" class="number" data-unit-price="1333.68">  
+                    <!-- <input type="button"  value="+" onclick="add3()" class="plus-btn"> -->
+                    <button class="plus-btn" type="button" name="button" value="+">+</button>  
+                </form>
+            </td>
+            <td>¥1333.68</td>
+            <td class="total"><span class = "single_total">¥1333.68</span></td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" value="" id='id1' name='cb'></td>
+            <td><img src="img/p.png" alt="" class="sample_img"></td>
+            <td>就是这么酷，达人必备！</td>
+            <td>
+                <form name="buy" class="count_box">
+                    <button class="minus-btn" type="button" name="button" value="-">-</button>
+                    <!-- <input type="button"  value="-" onclick="sub()" class="minus-btn">   -->
+                    <input type="text" name="ans" value="1" class="number" data-unit-price="141.99">  
+                    <!-- <input type="button"  value="+" onclick="add()" class="plus-btn">   -->
+                    <button class="plus-btn" type="button" name="button" value="+">+</button> 
+                </form>
+            </td>
+            <td>¥141.99</td>
+            <td class="total"><span class = "single_total">¥141.99</span></td>
+        </tr>
+        <tr id="footer">
+            <td colspan="6">
+                <div id="footer_left">
+                    <input type="checkbox" value="" class="click_all" id="all_click_2">
+                    全选
+                    <input type='button' onclick='location.reload();' value='重置' class="reset_btn" />
+                </div>
+                <div id="footer_right">
+                        已选商品
+                        <span style="color:red" id="total_items">0</span>
+                        件
+                        <div id="triangle-up"></div>
+                        合计人民币¥
+                        <span style="color:red" id="sum_total">0.00</span>
+                        元
+                </div>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
